@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Button from "./components/Button";
+import Card from "./components/Card";
 
 const url = "https://raw.githubusercontent.com/devchallenges-io/web-project-ideas/main/front-end-projects/data/simple-coffee-listing-data.json";
 
@@ -24,28 +25,10 @@ function App() {
 
     function renderProducts(arr) {
         return arr.map((product) => {
-            const { name, id, image, price, rating, votes, popular, available } = product;
             return (
-                <article className="products__card" key={id}>
-                    <figure className="products__card-fig">
-                        <img className="products__card-image" src={image} alt={name} />
-                        {popular && <figcaption className="products__card-popular">popular</figcaption>}
-                    </figure>
-
-                    <header className="products__card-header">
-                        <h3 className="products__card-name">{name}</h3>
-                        <p className="products__card-price">{price}</p>
-                    </header>
-
-                    <footer className="products__card-footer">
-                        <div className="products__card-rate">
-                            <p className="products__card-rating">{rating && `Rating: ${rating}`}</p>
-                            <p className="products__card-votes">{rating ? `(${votes} votes)` : "No Ratings"}</p>
-                        </div>
-                        {!available && <p className="products__card-sold">Sold Out</p>}
-                    </footer>
-
-                </article>
+                <Card key={product.id}
+                    product={product}
+                />
             );
         });
     }
