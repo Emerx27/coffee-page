@@ -1,0 +1,187 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-size: 16px;
+  /* 1rem = 10px */
+  font-family: "DM Sans", sans-serif;
+  background-color: #111315;
+  margin: 4rem 0;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+video {
+  display: block;
+  width: 100%;
+}
+
+[class$="container"] {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  line-height: 1.4;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media(min-width:768px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem;
+  }
+}
+
+@media(min-width:1080px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.products__card {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-weight: bold;
+}
+
+.products__card-rate {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.products__card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.products__card-image {
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.products__card-fig {
+  position: relative;
+  width: 100%;
+}
+
+.products__card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products__card-votes {
+  color: #6F757C;
+}
+
+.products__card-price {
+  background-color: #BEE3CC;
+  color: #1B1D1F;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+}
+
+.products__card-popular {
+  background-color: #F6C768;
+  border-radius: 5rem;
+  color: #1B1D1F;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: .5rem 2rem;
+  text-transform: capitalize;
+}
+
+.products__card-sold {
+  color: #ED735D;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.main__content-text {
+  color: #6F757C;
+  max-width: 50rem;
+}
+
+.main__buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.main__button {
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: .7rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+
+
+.main__button--active {
+  background-color: #6F757C;
+}
+
+.main {
+  background-color: #1B1D1F;
+  padding: 4rem 2rem;
+}
+
+@media(min-width:1080px) {
+  .main {
+    padding: 8rem;
+  }
+}
