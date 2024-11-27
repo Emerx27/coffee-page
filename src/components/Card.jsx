@@ -1,5 +1,5 @@
 function Card({product}) {
-    const { name, id, image, price, rating, votes, popular, available } = product;
+    const { name, image, price, rating, votes, popular, available } = product;
 
     return (
         <article className="products__card">
